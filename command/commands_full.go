@@ -34,7 +34,6 @@ import (
 	physMSSQL "github.com/hashicorp/vault/physical/mssql"
 	physMySQL "github.com/hashicorp/vault/physical/mysql"
 	physOCI "github.com/hashicorp/vault/physical/oci"
-	physPostgreSQL "github.com/hashicorp/vault/physical/postgresql"
 	physS3 "github.com/hashicorp/vault/physical/s3"
 	physSpanner "github.com/hashicorp/vault/physical/spanner"
 	physSwift "github.com/hashicorp/vault/physical/swift"
@@ -63,7 +62,6 @@ func newFullAddonHandlers() (map[string]physical.Factory, map[string]LoginHandle
 		"mssql":                 physMSSQL.NewMSSQLBackend,
 		"mysql":                 physMySQL.NewMySQLBackend,
 		"oci":                   physOCI.NewBackend,
-		"postgresql":            physPostgreSQL.NewPostgreSQLBackend,
 		"s3":                    physS3.NewS3Backend,
 		"spanner":               physSpanner.NewBackend,
 		"swift":                 physSwift.NewSwiftBackend,
